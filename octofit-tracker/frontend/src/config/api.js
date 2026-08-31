@@ -24,6 +24,16 @@ const getApiBaseUrl = () => {
 
 export const API_BASE_URL = `${getApiBaseUrl()}/api`;
 
+// API Endpoint URLs (used to construct dynamic endpoints with Codespace domains)
+// Format: https://${CODESPACE_NAME}-8000.app.github.dev/api/[endpoint]/
+export const API_ENDPOINTS = {
+  activities: `${API_BASE_URL}/activities`,
+  leaderboard: `${API_BASE_URL}/leaderboard`,
+  teams: `${API_BASE_URL}/teams`,
+  users: `${API_BASE_URL}/users`,
+  workouts: `${API_BASE_URL}/workouts`,
+};
+
 /**
  * Helper to handle paginated and array responses
  * Returns an array of items from either:

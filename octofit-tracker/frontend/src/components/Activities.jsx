@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
-import { fetchFromApi } from '../config/api';
+import { fetchFromApi, API_ENDPOINTS } from '../config/api';
 
+/**
+ * Activities Component
+ * Fetches data from: https://${VITE_CODESPACE_NAME}-8000.app.github.dev/api/activities/
+ */
 export default function Activities() {
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
