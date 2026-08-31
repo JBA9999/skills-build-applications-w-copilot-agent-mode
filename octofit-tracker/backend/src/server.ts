@@ -39,7 +39,7 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
   res.status(err.status || 500).json({ error: err.message || 'Internal server error' });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   const apiUrl = process.env.CODESPACE_NAME
     ? `https://${process.env.CODESPACE_NAME}-8000.app.github.dev`
     : `http://localhost:${PORT}`;
